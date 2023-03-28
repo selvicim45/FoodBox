@@ -1,0 +1,23 @@
+
+<input type="button" value="Back" class="btn btn-primary" (click)="showConfirmationPage()"><br/>    
+<br/> <br/> <br/> <br/> 
+<h1 style="text-align:center;">Payment:</h1>
+<div class="row">
+    <div class="col-md-3"></div>
+       <div class="col-md-6">
+        <form (ngSubmit)="showThankYou()">              
+          First Name:
+            <input type="text" class="form-control"   name="firstname"><br/>
+          Last Name  
+            <input type="text" class="form-control"   name="lastname"><br/>
+          Credit Card Number:
+            <input type="text" class="form-control"   name="cnumber"><br/>
+          Expiration Date:  
+            <input type="text" class="form-control"   name="edate"><br/>  
+          Secruity Code: 
+            <input type="text" class="form-control"   name="ccode"><br/>   
+          <input type="submit" value="Pay" class="btn btn-success"  (click)="showThankYou()">         
+        </form>
+       </div>   
+  <div class="col-md-3"></div>
+  </div>

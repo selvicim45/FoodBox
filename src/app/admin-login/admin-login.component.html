@@ -1,0 +1,19 @@
+
+<div class="col-md-3"></div>
+<br/><br/><br/>
+<div class="row">
+    <div class="col-md-3"></div>
+       <div class="col-md-6">
+        <form (ngSubmit)="adminLogin()">  
+          <h1>Admin Login Form:</h1>            
+          UserName:
+            <input type="text" class="form-control" [(ngModel)]="admin.adminname"  name="adminname"><br/>
+          Password:  
+            <input type="text" class="form-control" [(ngModel)]="admin.password" name="password"><br/>
+  
+          <input type="submit" value="Login" class="btn btn-primary" (click)="adminLogin()">         
+        </form>
+       </div>   
+  <div class="col-md-3"></div>
+  </div>
+

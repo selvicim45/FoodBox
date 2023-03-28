@@ -1,0 +1,41 @@
+<input type="button" value="Home" class="btn btn-info" style="align-content:center;" (click)="showHomePage()">
+&nbsp;
+
+<input type="button" value="Admin" class="btn btn-info" style="align-content:center;" (click)="showAdminComponent()">
+&nbsp;&nbsp;
+<br/><br/><br/>
+<h1 style="text-align: center;">Add New Food:</h1>
+<br/>
+
+<div class="d-flex justify-content-center">
+<div class="card align-center" style="width: 18rem;">
+    
+    <div>
+        <form >  
+        <h5>Cuisine:</h5>
+        <input type="text"  class="form-control" [(ngModel)]="food.cuisine" name="cuisine"><br/>
+        <h5>Description:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="food.description"  name="description" ><br/>
+        <h5>Name:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="food.name"  name="name" ><br/>
+        <h5>Offers:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="food.offers"  name="offers" ><br/>
+        <h5>Enable:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="food.enable"  name="enable" ><br/>
+        <h5>Price:</h5>
+        <input type="text" class="form-control"  [(ngModel)]="food.price"  name="price" ><br/>  
+        </form>     
+     </div> 
+        <h5>Picture Upload:</h5>
+        <input type="file" class="form-control"  accept="image/*"  (change)="onSelectFile($event)"><br/>
+
+        <div class="d-flex justify-content-center">
+            <input type="submit" value="Add" class="btn btn-primary" style="align-content:center;" (click)="saveForm(reactiveForm)" >
+        </div>
+    
+    
+
+</div>
+</div>
+
+

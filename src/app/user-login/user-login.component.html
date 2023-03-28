@@ -1,0 +1,23 @@
+<input type="button" value="HomePage" class="btn btn-primary" (click)="showHomePage()"><br/> 
+<br/><br/><br/><br/><br/><br/>
+<div class="col-md-3"></div>
+
+<div class="row">
+    <div class="col-md-3"></div>
+       <div class="col-md-6">
+        <form (ngSubmit)="userLogin()">  
+          <h1>User Login Form:</h1>            
+          UserName:
+            <input type="text" class="form-control" [(ngModel)]="user.username"  name="username"><br/>
+          Password:  
+            <input type="text" class="form-control" [(ngModel)]="user.password" name="password"><br/>
+  
+          <input type="submit" value="Login" class="btn btn-primary" (click)="userLogin()">         
+        </form>
+       </div>   
+  <div class="col-md-3"></div>
+  </div>
+
+ 
+
+

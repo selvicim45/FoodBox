@@ -1,0 +1,55 @@
+<input type="button" value="HomePage" class="btn btn-primary" (click)="showHomePage()"><br/> 
+<br/><br/><br/><br/><br/>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card-body" mb-10>
+        Search By Cuisine:
+        &nbsp;
+        <select (change)="showFoodSelectedFromDropDown($event)">
+            <option *ngFor="let fdropdown of foodInfo" >
+                {{fdropdown.cuisine}}
+            </option>
+        </select>
+        <br/><br/><br/>   
+     </div>
+    <table  style="height: 100px;" class="table table-bordered" mt-10>
+        <tr>   
+             
+          <th>Name</th>
+          <th>Price</th>         
+          <th>Cuisine</th>
+          <th>Description</th>
+          <th>Offers</th>
+          <th>Picture</th>
+          <th>Select</th>
+         
+         </tr>        
+        <tr *ngFor="let f of foodInfo">  
+                  
+          <td>{{f.name}}</td>
+          <td>{{f.price}}</td>  
+          <td>{{f.cuisine}}</td>
+          <td>{{f.description}}</td>
+          <td>{{f.offers}}</td>
+          <td><img src={{f.piclinks}}  alt="images" height="70" width="70"></td>
+                    
+         <tbody>    
+          <td>
+          
+            <input type="checkbox"  id="first1" name="chkselected" [value]="f.name" (change)="addSelectedFoodToArray($event)">
+              
+          </td> 
+        </tbody>       
+        </tr>   
+    </table>
+        </div>
+  
+    <div class="col-md-3"></div>
+    </div>
+    <br/>     
+    <div style="text-align:center">  
+       
+      <input type="button" class="btn btn-success" value="Add to Cart" (click)="sender()">   
+           
+    </div> 
